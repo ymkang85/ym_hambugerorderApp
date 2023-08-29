@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery.mobile-1.4.5.js"></script>
+    <script src="assets/js/login.js"></script>
+</head>
+<body>
+    <div data-role="page" id="login-screen">
+        <div role="main" class="ui-content">
+            <!-- ***************************** login form ****************************** -->
+            <h2 id="sign-in-text">
+                <img src="./assets/img/login_ym.png" class="log-img" alt="#">
+                Sign In
+            </h2>
+            <form>
+                <input type="text" id="inputUsername" placeholder="아이디" data-wrapper-class="custom-input mx-auto d-block"/>
+                <div class="mt-3"></div>
+                <input type="password" id="inputPassword" placeholder="비밀번호" data-wrapper-class="custom-input mx-auto d-block" />
+            
+                <a href="#" class="btn login-btn mx-auto d-block" onclick="login()">로그인</a>
+                <a href="register.html" class="btn register-btn mx-auto d-block">
+                    회원가입
+                </a>
+            </form>
+
+            <!------------------------------------validation modal----------------------->
+            <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissib="false" style="max-width: 400px;">
+                <div data-role="header" data-theme="a">
+                    <h1>에러!!!!</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <p>아이디 또는 비밀번호가 맞지 않습니다.</p>
+                    <p>다시 확인해 주세요.</p>
+                    <div class="text-right">
+                        <a href="#" class="ui-btn ui-corner-aa ui-shadow ui-btn-b ui-btn-inline" data-rel="back">닫기</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

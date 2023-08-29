@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Sunflower:wght@300;500;700&display=swap');
+@import url('remixicon.css');
+@import url('slick.css');
+@import url('slick-theme.css');
 @import url('bootstrap.min.css');
 @import url('jquery.mobile-1.4.5.css');
 
@@ -6,12 +9,27 @@ body{
    /* font-family: 'Noto Sans KR', sans-serif; */
    font-family: 'Sunflower', sans-serif;
 }
-
-/* ################### INTRO ################# */
-.ui-content{
+.ui-page{
     background-color:#efefef;
     border-color:#efefef;
 }
+form{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.custom-input{
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+input[type=text],[type=password],[type=search]{
+    font-size: 16px;
+    font-family: 'Sunflower', sans-serif;
+    font-weight: 500;
+}
+/* ################### INTRO ################# */
+
 .intro-img01{
     width: 85%;
     margin-top:60px;
@@ -40,8 +58,7 @@ body{
     width:100%;
     text-align:center;
 }
-.stepper
-{
+.stepper{
    height:10px;
    width:10px;
    background-color:#bebebe;
@@ -52,7 +69,6 @@ body{
 .stepper.act{
     background-color:#febae8;
  }
-
 .btn-box{
     padding-top:1.5em;
     padding-bottom:3em;
@@ -66,4 +82,116 @@ body{
       left:0px;
       top:15px;
    }
+}
+
+/* ################### LOGIN ################# */
+.log-img{
+    width: 35px;
+    height:35px;
+}
+#login-screen form{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+#sign-in-text{
+    font-family:'Noto Sans KR', sans-serif; 
+    font-weight:700;
+    font-size :2em;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 50px;
+}
+.ui-focus{
+    box-shadow: none !important;
+}
+.login-btn{
+    background-color: #323335;
+    width:100%;
+    margin-top:1.5em;
+    height:50px;
+    border-radius:25px;
+    font-size: 1.2em;
+    line-height: 40px;
+    text-shadow: none;
+    color:#fff;
+}
+.ui-page-theme-a a{
+    color: #fff /*{a-link-color}*/;
+    font-weight: 500;
+}
+
+/* ######################## MAIN ######################### */
+#home-screen{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+    background-color: transparent /*{a-bar-background-color}*/;
+    border-color: transparent /*{a-bar-border}*/;
+    color: #333 /*{a-bar-color}*/;
+    text-shadow: 0 /*{a-bar-shadow-x}*/ 1px /*{a-bar-shadow-y}*/ 0 /*{a-bar-shadow-radius}*/ #eee /*{a-bar-shadow-color}*/;
+    font-weight: bold;
+}
+#nav-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+    color:#333;
+    padding: 0;
+    margin-right: 5px;
+}
+#nav-close{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top:10px;
+    right: 0px;
+}
+#nav-close i{
+    font-size: 2em;
+}
+.logobox{
+    width:80px;
+    margin: 20px;
+    position: relative;
+}
+.logobox img{
+    max-width: 50px;
+}
+.logobox h1{
+    font-size: 25px;
+    margin-top: 5px;
+    position: absolute;
+    top:-10px;
+    left:60px;
+}
+.nav{
+    cursor: pointer;
+    display: inline-block;
+    top:20px;
+    right:1em;
+}
+.nav i{    
+    font-size: 2em;
+}
+#nav-list{
+    margin-top:80px;
+}
+form .ui-input-search{
+    border-radius: 25px;
+    padding-left: 10px;
+}
+.slider{
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+}
+.slick-dots{
+    bottom: 0px;
 }
