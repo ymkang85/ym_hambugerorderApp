@@ -6,28 +6,42 @@
 @import url('jquery.mobile-1.4.5.css');
 
 body{
-   /* font-family: 'Noto Sans KR', sans-serif; */
-   font-family: 'Sunflower', sans-serif;
-}
-.ui-page{
-    background-color:#efefef;
-    border-color:#efefef;
-}
-form{
-    padding-left: 2em;
-    padding-right: 2em;
-}
-.custom-input{
-    border: none;
-    height: 50px;
-    border-radius: 25px;
-    padding: 10px 20px;
-}
-input[type=text],[type=password],[type=search]{
-    font-size: 16px;
+    /* font-family: 'Noto Sans KR', sans-serif; */
     font-family: 'Sunflower', sans-serif;
-    font-weight: 500;
-}
+ }
+ a, 
+ a:link, 
+ .ui-page-theme-a a:visited, 
+ html .ui-bar-a a:visited, 
+ html .ui-body-a a:visited, 
+ html body .ui-group-theme-a a:visited {
+     color:#333;
+     text-decoration:none;
+ }
+ .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+     padding-right: 10px;
+     padding-left: 10px;
+ }
+ .ui-page{
+     background-color:#efefef;
+     border-color:#efefef;
+ }
+ input[type=text],
+ input[type=password],
+ input[type=search]{
+     font-size:16px;
+     font-family: 'Sunflower', sans-serif;
+     font-weight:500;
+ }
+ .custom-input{
+     border:none;
+     height:50px;
+     border-radius:25px;
+     padding:10px 20px;
+ }
+ .ui-focus {
+     box-shadow: none !important;
+ }
 /* ################### INTRO ################# */
 
 .intro-img01{
@@ -53,7 +67,6 @@ input[type=text],[type=password],[type=search]{
     font-weight:300;
     font-size:1.2em;
 }
-
 #custom-stepper{
     width:100%;
     text-align:center;
@@ -101,10 +114,7 @@ input[type=text],[type=password],[type=search]{
     margin-top: 20vh;
     margin-bottom: 50px;
 }
-.ui-focus{
-    box-shadow: none !important;
-}
-.login-btn{
+.login-btn,.register-btn{
     background-color: #323335;
     width:100%;
     margin-top:1.5em;
@@ -113,13 +123,52 @@ input[type=text],[type=password],[type=search]{
     font-size: 1.2em;
     line-height: 40px;
     text-shadow: none;
-    color:#fff;
 }
 .ui-page-theme-a a{
     color: #fff /*{a-link-color}*/;
     font-weight: 500;
 }
 
+/* ######################## REGISTER ######################### */
+.register-form label{
+    width: 100px;
+    display: inline-block;
+}
+.ui-body-a, 
+.ui-page-theme-a .ui-body-inherit, 
+html .ui-bar-a .ui-body-inherit, 
+html .ui-body-a .ui-body-inherit, 
+html body .ui-group-theme-a .ui-body-inherit, 
+html .ui-panel-page-container-a {
+    background-color: #fff /*{a-body-background-color}*/;
+    border-color: #ddd /*{a-body-border}*/;
+    color: #333 /*{a-body-color}*/;
+    text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
+    display : inline-block;
+    width: 210px;
+}
+.ui-body-a, 
+.ui-page-theme-a .ui-body-inherit, 
+html .ui-bar-a .ui-body-inherit, 
+html .ui-body-a .ui-body-inherit, 
+html body .ui-group-theme-a .ui-body-inherit, 
+html .ui-panel-page-container-a phone-number .phone-number{
+    background-color: #fff /*{a-body-background-color}*/;
+    border-color: #ddd /*{a-body-border}*/;
+    color: #333 /*{a-body-color}*/;
+    text-shadow: 2 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
+    display: inline-block;
+    width: 300px;
+}
+.register-btn{
+    width:150px;
+    margin-top:150px;
+}
+.ui-mobile label, div.ui-controlgroup-label .telecom {
+    font-weight: normal;
+    font-size: 16px;
+    display: block;
+}
 /* ######################## MAIN ######################### */
 #home-screen{
     padding-left: 10px;
@@ -194,4 +243,91 @@ form .ui-input-search{
 }
 .slick-dots{
     bottom: 0px;
+}
+/**************** LIST PAGE ************************/
+.food-card{
+    background:#fff;
+    padding-top:15px;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.08);
+}
+.food-card:active{
+    box-shadow:0 -3px 3px 0 rgba(0,0,0,0.3),
+               0 -3px 15px 0 rgba(0,0,0,0.1);
+}
+.food-title{
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:-1px;
+    margin-bottom:2px;
+}
+.food-description{
+    font-size:14px;
+    color:#177EAA;
+    margin-bottom:5px;
+}
+.food-ratings i{
+    color:#F4C622;
+}
+.food-price{
+    font-size:18px;
+    font-weight: 700;
+}
+p.food-wish{
+    margin:0;
+}
+.food-wish i{
+    font-size:18px;
+    color:#F44822;
+}
+/**************** LIST PAGE ************************/
+/* .list-page ul{
+    padding : 10px 15px;
+    scroll-behavior: smooth;
+}
+.list-page li{
+    list-style-type: none;
+    background: #000;
+    outline: none;
+    text-shadow: none;
+    box-shadow: none;
+    height: 180px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    margin: 10px;
+    overflow: hidden;
+    position : relative;
+}
+.list-page p{
+    color:#fff;
+    display: inline;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.list-page .main-img{
+    width: 130px;
+    display: inline;
+    float: left;
+}
+.list-page .place{
+    color:#febae8;
+}
+.list-page span{
+    position: absolute;
+    background: url(https://aldo814.github.io/jobcloud/html/images/user/star02.png) no-repeat;
+    width: auto;
+    height: 20px;
+}
+.ui-checkbox, .ui-radio {
+    display: inline;
+    margin: 0.5em 0;
+    position: relative;
+} */
+/* ############################ FOOTER ########################################## */
+.ui-navbar i{
+    font-size: 1.5em;
 }
