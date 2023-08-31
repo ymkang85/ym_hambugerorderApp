@@ -27,5 +27,8 @@ $(function(){
         
     });
 
-    $('.')
+    $('.topping').on("click",function(){
+        var toping = $('.topping').val();
+        console.log(toping);
+    });
 });  //jquery
