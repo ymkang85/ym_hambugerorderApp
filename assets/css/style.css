@@ -134,32 +134,6 @@ body{
     width: 100px;
     display: inline-block;
 }
-.ui-body-a, 
-.ui-page-theme-a .ui-body-inherit, 
-html .ui-bar-a .ui-body-inherit, 
-html .ui-body-a .ui-body-inherit, 
-html body .ui-group-theme-a .ui-body-inherit, 
-html .ui-panel-page-container-a {
-    background-color: #fff /*{a-body-background-color}*/;
-    border-color: #ddd /*{a-body-border}*/;
-    color: #333 /*{a-body-color}*/;
-    text-shadow: 0 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
-    display : inline-block;
-    width: 210px;
-}
-.ui-body-a, 
-.ui-page-theme-a .ui-body-inherit, 
-html .ui-bar-a .ui-body-inherit, 
-html .ui-body-a .ui-body-inherit, 
-html body .ui-group-theme-a .ui-body-inherit, 
-html .ui-panel-page-container-a phone-number .phone-number{
-    background-color: #fff /*{a-body-background-color}*/;
-    border-color: #ddd /*{a-body-border}*/;
-    color: #333 /*{a-body-color}*/;
-    text-shadow: 2 /*{a-body-shadow-x}*/ 1px /*{a-body-shadow-y}*/ 0 /*{a-body-shadow-radius}*/ #f3f3f3 /*{a-body-shadow-color}*/;
-    display: inline-block;
-    width: 300px;
-}
 .register-btn{
     width:150px;
     margin-top:150px;
@@ -168,6 +142,16 @@ html .ui-panel-page-container-a phone-number .phone-number{
     font-weight: normal;
     font-size: 16px;
     display: block;
+}
+.ui-checkbox input, .ui-radio input {
+    position: absolute;
+    left: 0.466em;
+    top: 50%;
+    width: 22px;
+    height: 22px;
+    margin: -11px 0 0 0;
+    outline: 0 !important;
+    z-index: 1;
 }
 /* ######################## MAIN ######################### */
 #home-screen{
@@ -247,18 +231,20 @@ form .ui-input-search{
 /**************** LIST PAGE ************************/
 .food-card{
     background:#fff;
-    padding-top:15px;
     padding-left:10px;
     padding-right:10px;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 0 5px 0 rgba(0,0,0,0.08);
+    margin-bottom: 20px;
 }
 .food-card:active{
-    box-shadow:0 -3px 3px 0 rgba(0,0,0,0.3),
-               0 -3px 15px 0 rgba(0,0,0,0.1);
+    transform: translate(-5px, -5px);
+    box-shadow:3px 3px 3px 0 rgba(0,0,0,0.3),
+               3px 3px 15px 0 rgba(0,0,0,0.1);
 }
 .food-title{
+    padding-top:15px;
     font-size:18px;
     font-weight:600;
     letter-spacing:-1px;
@@ -277,6 +263,7 @@ form .ui-input-search{
     font-weight: 700;
 }
 p.food-wish{
+    padding-top:15px;
     margin:0;
 }
 .food-wish i{
@@ -327,6 +314,132 @@ p.food-wish{
     margin: 0.5em 0;
     position: relative;
 } */
+
+/* ############################ main ########################################## */
+#main-screen .food-title{
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+#main-screen .food-description{
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    color:#333;
+}
+.main-top{
+    border-bottom: 1px solid #ddd;
+    margin: 60px 10px 0px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+    position: relative;
+}
+.main-top-img{
+    height: calc(100% -80px);
+}
+.main-top-img-background{
+    width: 85%;
+    height: 150px;
+    background: #177eaa;
+    position: absolute;
+    top:30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    z-index: 0;
+}
+.main-top-img .img{
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top:-140px;
+}
+.opt{
+    padding-left: 30px;
+    letter-spacing: -1.2px;
+    margin-bottom: 10px;
+    width:65%;
+}
+.opt-price{
+    text-align: right;
+    padding-right: 30px;
+    width: 35%;
+}
+.wrap::-webkit-scrollbar{
+    display: none;
+}
+.ul-topping{
+    width:100%
+}
+.ul-topping-box{
+    height: 140px;
+    padding: 10px 0;
+}
+.topping{
+    width: 80px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    position: relative;
+}
+.topping-box .active{
+    background: #177EAA;
+    color: #fff;
+}
+.topping p{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -10px;
+    font-size: 13px;
+}
+.topping p:first-child{
+    bottom: 5px;
+}
+/**  수량선택  **/
+.quantity-box{
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+.quantity-box>span{
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #eee;
+    height: 35px;
+    width: 60px;
+    margin-top: 10px;
+    text-align: center;
+}
+.quantity-box>span:active{
+    background-color: #333;
+    color: #fff;
+}
+.quantity-box>span:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+.quantity-box>span:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+}
+.quantity-box>span>i{
+    line-height: 35px;
+    font-size: 2em;
+}
+.quantity-box input.count-only{
+    width:40px;
+}
+.total{
+    padding-right:40px;
+}
 /* ############################ FOOTER ########################################## */
 .ui-navbar i{
     font-size: 1.5em;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/jquery.mobile-1.4.5.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <div data-role="page" id="main-screen">
+        <div data-role="header">
+            <div class="logobox">
+                <img src="assets/img/login_ym.png" alt="logo">
+                <h1>My Burger</h1>
+            </div>
+            <a href="#mynav" class="ui-btn-right nav" id="nav-btn"><i class="ri-menu-line"></i></a>            
+        </div>
+        <div role="main" class="ui-content">
+            <form>
+                <input type="search" name="serarch" id="search" class="custom-input" placeholder="검색.....">
+            </form>
+            <!--   햄버거 본문   -->
+            <h1 class="food-title text-center">
+                칠리 새우를 넣은 진짜 맛좋은 더블버거
+            </h1>
+            <p class="food-description">
+                지금 막 출시한 새로운 신상품, 오후 3시면 벌써 품절되는 인기 상품
+            </p>
+            <div class="main-top">
+                <div class="main-top-img">
+                    <div class="main-top-img-background"></div>
+                    <img src="assets/img/Home/Trending Picks/Burger-img.png" 
+                        class="img-fluid img" alt="햄버거" />                
+                </div>
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="opt">
+                            칠리새우를 넣은 진짜 맛좋은 더블버거
+                        </div>
+                        <div class="opt-price">
+                            15,000원
+                        </div>
+                    </div>
+                </div>
+                               
+                <div class="ul-topping">
+                    <div class="ul-topping-box">
+                        <div class="topping active" style="background-image: url(assets/img/topping-1.png)">
+                            <p>고기추가</p>
+                            <p>1,000원</p>
+                        </div>
+                    </div>
+                    <div class="ul-topping">
+                        <div class="ul-topping-box">
+                            <div class="topping" style="background-image: url(assets/img/topping-1.png)">
+                                <p>고기추가</p>
+                                <p>1,000원</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ul-topping">
+                        <div class="ul-topping-box">
+                            <div class="topping" style="background-image: url(assets/img/topping-1.png)">
+                                <p>고기추가</p>
+                                <p>1,000원</p>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>             
+            </div>
+            <div class="container my-4 ml-3">
+                <div class="row mb-5">
+                    <div class="col-5 pt-3">수량선택 : </div>
+                    <div class="col-7 d-flex">
+                        <div class="quantity-box d-flex">
+                            <span class="down"><i class="ri-arrow-down-line"></i></span>
+                            <input type="number" class="count-only" readonly value="1">
+                            <span class="up"><i class="ri-arrow-up-line"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row md-4">
+                    <div class="col-4">합계금액: </div>
+                    <div class="col-8 text-right total">15,000원</div>
+                </div>
+                <input type="hidden" id="price" name="price" value="15000">
+                <input type="hidden" id="total-price" name="total-price" value="">
+            </div>
+    
+            <footer data-role="footer"  data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#" class="ui-btn-active">
+                                <i class="ri-shield-user-fill"></i><br>members</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-heart-2-fill"></i><br>whish list</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-shopping-cart-fill"></i><br>cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+    </html>
