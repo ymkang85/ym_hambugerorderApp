@@ -1,51 +1,14 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>intro</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/jquery.mobile-1.4.5.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/main.js"></script>
-</head>
-<body>
-    <div data-role="page" id="main-screen">
-        <nav data-role="panel" 
-             data-position="right" 
-             data-display="overlay"
-             id="mynav"
-        >
-            <a href="#demo-links" 
-               data-rel="close" 
-               class="ui-btn ui-btn-inline" id="nav-close">
-               <i class="ri-close-line"></i>
-            </a>
-            <ul data-role="listview" id="nav-list">
-                <li><a href="#">account</a></li>
-                <li><a href="#">favorites</a></li>
-                <li><a href="#">faq</a></li>
-                <li><a href="#">회원혜택</a></li>
-                <li><a href="#">장바구니</a></li>
-                <li><a href="#">구매정보</a></li>
-                <li><a href="#">로그아웃</a></li>
-            </ul>
-        </nav>
-    <div data-role="header">
-            <div class="logobox">
-                <img src="assets/img/Home/Trending Picks/Burger-img.png" alt="logo">
-                <h1>My Burger</h1>
-            </div>
-            <a href="#mynav" class="ui-btn-right nav" id="nav-btn"><i class="ri-menu-line"></i></a>
-    </div>
-    <div role="main" class="ui-content list">
-       <!-- <form>
-         <input type="search" name="search" id="search" class="custom-input" placeholder="검색..." />
-       </form>
-   
-        <h1 class="food-title text-center">
+$(document).on("pagecreate", function(){
+    const params = new URLSearchParams(document.location.search);
+    const fid = params.get("foodId");
+    $.ajax({
+        type: "get", 
+        dataType: "JSON", 
+        url: "../data/list.json",
+        success: function(data){
+            const rs = data.filter((list) => list.foodId == fid );
+            console.log(rs);
+            $('.list').append(`<h1 class="food-title text-center">
           칠리새우를 넣은 진짜 맛좋은 더블버거
         </h1>
         <p class="food-description">
@@ -162,49 +125,10 @@
             <input type="hidden" id="total-price" name="total-price" value="15000">        
             <input type="hidden" id="option" />
         </div> 
-     </div>  
-
-     <div class="container my-5">
-        <div class="d-flex">
-            <div class="col-4">
-                <button type="button" class="btn btn-wish">
-                    <i class="ri-heart-fill"></i><br> wish
-                </button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-cart">
-                    <i class="ri-shopping-cart-fill"></i><br> cart
-                </button>
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-order">
-                    <i class="ri-corner-down-left-fill"></i><br> order
-                </button>
-            </div>
-        </div>
-     </div>
-
-    </div>  -->
-    <!-- ui-content -->
-    <footer data-role="footer" data-position="fixed">
-            <div data-role="navbar">
-                <ul>
-                    <li>
-                        <a href="#" class="ui-btn-active">
-                            <i class="ri-user-settings-fill"></i><br>
-                            members
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="ri-heart-fill"></i><br>whish list</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="ri-shopping-cart-fill"></i><br>cart</a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-      </div><!-- page -->
-        
-    </body>
-    </html>
+     `);
+        },
+        error: function(){
+            console.log("에러");
+        }
+    });
+});
