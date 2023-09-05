@@ -1,4 +1,4 @@
-$(document).on("pagecreate", function(){
+function myOption(){
     let price = Number($("#price").val());  //최초 상품 가격
     let totalprice = $("#price").val();  // 총 상품가격 변수 선언
     let option_arr = [];  //상품 옵션은 여러개 일수 있으므로 배열로 선언
@@ -39,7 +39,8 @@ $(document).on("pagecreate", function(){
         $('.total').text(totalprice.toLocaleString() + "원");    
     });
 
-    $('.topping').click(function(){   
+       $('.topping').click(function(){   
+    //    $(document).on("click","topping", function(){
        const option = $(this).data("option");
        let ct = Number($('.count-only').val());
        let addprice = Number($(this).data("optionprice"));
@@ -60,7 +61,6 @@ $(document).on("pagecreate", function(){
            $('#total-price').val(totalprice);
            $('#option-price').val(optionprice);
            $('.total').text(totalprice.toLocaleString() + "원");
-    });
-    
-  });
+    });    
+  }
 

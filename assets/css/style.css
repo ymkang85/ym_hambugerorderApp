@@ -124,7 +124,8 @@ body{
     line-height: 40px;
     text-shadow: none;
 }
-.ui-page-theme-a a{
+.ui-page-theme-a a, 
+.ui-page-theme-a a a.login-btn{
     color: #fff /*{a-link-color}*/;
     font-weight: 500;
 }
@@ -400,6 +401,30 @@ p.food-wish{
 }
 .total{
     padding-right:40px;
+}
+a.btn.btn-cart, 
+a.btn.btn-wish,
+a.btn.btn-order{
+    background-color: #f6f6f6 /*{a-bup-background-color}*/;
+    border-color: #ddd /*{a-bup-border}*/;
+    color: #333 /*{a-bup-color}*/;
+    text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #f3f3f3 /*{a-bup-shadow-color}*/;
+    border-radius: 0.3125em;
+    font-size: 16px;
+    margin: 0.5em 0;
+    padding: 0.7em 1em;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ rgba(0,0,0,.15) /*{global-box-shadow-color}*/;
 }
 /* ############################ FOOTER ########################################## */
 .ui-navbar i{

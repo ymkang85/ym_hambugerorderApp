@@ -41,7 +41,7 @@
             <a href="#mynav" class="ui-btn-right nav" id="nav-btn"><i class="ri-menu-line"></i></a>
     </div>
     <div role="main" class="ui-content list">
-       <!-- <form>
+       <form>
          <input type="search" name="search" id="search" class="custom-input" placeholder="검색..." />
        </form>
    
@@ -55,7 +55,7 @@
         <div class="main-top-img">
             <div class="main-top-img-background"></div> 
             <img src="assets/img/Home/Trending Picks/Burger-img.png" 
-                      class="img-fluid img" alt="햄버거" />         
+                      class="img-fluid img" id="food-img" alt="햄버거" />         
         </div>
         <div class="container my-3">
             <div class="row">
@@ -157,6 +157,7 @@
                 <div class="col-4">합계금액 : </div>
                 <div class="col-8 text-right total">15,000원</div>
             </div>
+            <input type="hidden" id="foodId" name="foodId">
             <input type="hidden" id="price" name="price" value="15000">
             <input type="hidden" id="option-price" value="15000">
             <input type="hidden" id="total-price" name="total-price" value="15000">        
@@ -167,32 +168,33 @@
      <div class="container my-5">
         <div class="d-flex">
             <div class="col-4">
-                <button type="button" class="btn btn-wish">
+                <a href="#" type="button" class="btn btn-wish">
                     <i class="ri-heart-fill"></i><br> wish
-                </button>
+                </a>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-cart">
+                <a href="#list-cart" class="btn btn-cart"
+                data-rel="dialog" data-transition="slidedown">
                     <i class="ri-shopping-cart-fill"></i><br> cart
-                </button>
+                </a>
             </div>
             <div class="col-4">
-                <button type="button" class="btn btn-order">
+                <a href="#" type="button" class="btn btn-order">
                     <i class="ri-corner-down-left-fill"></i><br> order
-                </button>
+                </a>
             </div>
         </div>
      </div>
 
-    </div>  -->
+    </div> 
     <!-- ui-content -->
     <footer data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
                     <li>
-                        <a href="#" class="ui-btn-active">
+                        <a href="#" id="logout" class="ui-btn-active">
                             <i class="ri-user-settings-fill"></i><br>
-                            members
+                            logout
                         </a>
                     </li>
                     <li>
@@ -205,6 +207,10 @@
             </div>
         </footer>
       </div><!-- page -->
-        
+
+      <div data-role="page" id="list-cart" class="cart-upload-list">
+        장바구니
+        <ul></ul>
+      </div>
     </body>
     </html>
