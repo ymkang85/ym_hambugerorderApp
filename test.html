@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      table{
+        width:600px;
+        margin:20px auto;
+      }
+      table, tr, td{
+         border:1px solid #333;
+         border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+   <table>
+
+   </table>
+  <div>
+    <label>test1</label>
+    <input type="text" id="test1">
+  </div> 
+  <div>
+    <label>test2</label>
+    <input type="text" id="test2">
+  </div> 
+  <div>
+    <label>test3</label>
+    <input type="text" id="test3">
+  </div> 
+  <div>
+    <button id="btn">저장</button>
+  </div>
+    <button id="delbtn">스토리지삭제</button>
+  <script>
+     const btn = document.getElementById("btn");
+     const delbtn = document.getElementById("delbtn");
+     const test1 = document.getElementById("test1");
+     const test2 = document.getElementById("test2");
+     const test3 = document.getElementById("test3");
+
+     let myStorage = [];
+
+   //스토리이지에 저장된 값을 가져와 table에 입력
+     let tr = "";
+     if(localStorage.getItem("test")){  //test 스토리지에 값 있을때
+        myStorage = JSON.parse(localStorage.getItem("test"));
+        
+        //배열의 길이가 0보다 클때 (위에서 test 스토리지 조건 달았기 때문에 필요 없을 수도 있음)
+        if(myStorage.length > 0){ 
+           //배열을 forEach를 이용하여 하나씩 list에 담음 
+           myStorage.forEach((list, i)=>{
+             tr += "<tr>";
+
+              //배열안의 object를 for in 문을 이용하여 key , value 형태로 출력
+              for(let key in list){
+                 tr += "<td>"+ key +"</td>";
+                 tr +=  "<td>" + list[key] + "</td>";
+                 console.log(key);
+                 console.log(list[key]);
+              }
+              tr += "</tr>";
+           });
+
+           //본문의 table 태그를 가져와 table에 저장
+           const table = document.querySelector("table");
+           console.log(tr);
+           //본문에 출력
+           table.innerHTML = tr;
+        }
+     }
+     //console.log(myStorage);
+     btn.addEventListener("click", ()=>{
+         //myStorage를 배열로 셋팅했기 땝문에 dummy는 배열일 필요 없음
+         let dummy = 
+           {"test1": test1.value,
+            "test2": test2.value,
+            "test3": test3.value};
+         //let newStorage = myStorage.concat(dummy);
+
+         //dummy값을 myStorage배열에 push해서 추가
+         myStorage.push(dummy);
+         localStorage.setItem("test", JSON.stringify(myStorage));
+     });
+
+     delbtn.addEventListener("click", function(){
+        window.localStorage.clear();  //도메인내의 모든 스토리지 삭제
+        /*
+            해당삭제는 localStorage.removeItem("키");
+        */
+     });
+  </script>
+</body>
+</html>

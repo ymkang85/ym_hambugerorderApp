@@ -91,7 +91,7 @@
     },
     {
         "foodId": 7,
-        "foodTitle": "힙&핫 키킨버거",
+        "foodTitle": "힙&핫 치킨버거",
         "foodDescription": "패티(150g*2EA), 치즈소스, 바베큐소스, 버거번",
         "foodStar": ["star", "star", "star", "half", "line"],
         "foodPrice": 22000,

@@ -10,22 +10,22 @@ body{
     font-family: 'Sunflower', sans-serif;
  }
  a, 
- a:link, 
- .ui-page-theme-a a:visited, 
- html .ui-bar-a a:visited, 
- html .ui-body-a a:visited, 
- html body .ui-group-theme-a a:visited {
-     color:#333;
-     text-decoration:none;
- }
- .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-     padding-right: 10px;
-     padding-left: 10px;
- }
- .ui-page{
-     background-color:#efefef;
-     border-color:#efefef;
- }
+a:link, 
+.ui-page-theme-a a:visited, 
+html .ui-bar-a a:visited, 
+html .ui-body-a a:visited, 
+html body .ui-group-theme-a a:visited {
+    color:#333;
+    text-decoration:none;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.ui-page{
+    background-color:#efefef;
+    border-color:#efefef;
+}
  input[type=text],
  input[type=password],
  input[type=search]{
@@ -124,27 +124,27 @@ body{
     line-height: 40px;
     text-shadow: none;
 }
-.ui-page-theme-a a, 
-.ui-page-theme-a a a.login-btn{
+.ui-page-theme-a a,
+.ui-page-theme-a a.login-btn {
     color: #fff /*{a-link-color}*/;
     font-weight: 500;
 }
 
 /* ######################## REGISTER ######################### */
-.register-form label{
+/* .register-form label{
     width: 100px;
     display: inline-block;
 }
-/* .register-btn{
+.register-btn{
     width:150px;
     margin-top:150px;
-} */
+}
 .ui-mobile label, div.ui-controlgroup-label .telecom {
     font-weight: normal;
     font-size: 16px;
     display: block;
 }
-/* .ui-checkbox input, .ui-radio input {
+.ui-checkbox input, .ui-radio input {
     position: absolute;
     left: 0.466em;
     top: 50%;
@@ -402,17 +402,17 @@ p.food-wish{
 .total{
     padding-right:40px;
 }
-a.btn.btn-cart, 
+a.btn.btn-cart,
 a.btn.btn-wish,
 a.btn.btn-order{
     background-color: #f6f6f6 /*{a-bup-background-color}*/;
     border-color: #ddd /*{a-bup-border}*/;
     color: #333 /*{a-bup-color}*/;
     text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #f3f3f3 /*{a-bup-shadow-color}*/;
-    border-radius: 0.3125em;
+    border-radius: 0.3125em; /*{global-radii-buttons}*/
     font-size: 16px;
     margin: 0.5em 0;
-    padding: 0.7em 1em;
+    padding: 0.5em 1em;
     display: block;
     position: relative;
     text-align: center;
@@ -425,7 +425,22 @@ a.btn.btn-order{
     -ms-user-select: none;
     user-select: none;
     box-shadow: 0 1px 3px /*{global-box-shadow-size}*/ rgba(0,0,0,.15) /*{global-box-shadow-color}*/;
+    background-clip: padding-box;
 }
+
+/* ############################ WISH ########################################## */
+#wishlist .mywhishList{
+    padding:1.2em;
+ }
+ #wishlist .mywhishList a img{
+    max-height:50px;
+    float:left;
+    margin-right:15px;
+ }
+ #wishlist li:not(:last-child){
+     border-bottom:1px dashed #bebebe;
+ }
+
 /* ############################ FOOTER ########################################## */
 .ui-navbar i{
     font-size: 1.5em;

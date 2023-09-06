@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,15 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.mobile-1.4.5.js"></script>
-    <script src="assets/js/script.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
+
 <body>
     <div data-role="page" id="main-screen">
-        <nav data-role="panel" 
-             data-position="right" 
-             data-display="overlay"
-             id="mynav"
-        >
-            <a href="#demo-links" 
-               data-rel="close" 
-               class="ui-btn ui-btn-inline" id="nav-close">
-               <i class="ri-close-line"></i>
+        <nav data-role="panel" data-position="right" data-display="overlay" id="mynav">
+            <a href="#demo-links" data-rel="close" class="ui-btn ui-btn-inline" id="nav-close">
+                <i class="ri-close-line"></i>
             </a>
             <ul data-role="listview" id="nav-list">
                 <li><a href="#">account</a></li>
@@ -33,162 +29,98 @@
                 <li><a href="#">로그아웃</a></li>
             </ul>
         </nav>
-    <div data-role="header">
+        <div data-role="header">
             <div class="logobox">
                 <img src="assets/img/Home/Trending Picks/Burger-img.png" alt="logo">
                 <h1>My Burger</h1>
             </div>
             <a href="#mynav" class="ui-btn-right nav" id="nav-btn"><i class="ri-menu-line"></i></a>
-    </div>
-    <div role="main" class="ui-content list">
-       <form>
-         <input type="search" name="search" id="search" class="custom-input" placeholder="검색..." />
-       </form>
-   
-        <h1 class="food-title text-center">
-          칠리새우를 넣은 진짜 맛좋은 더블버거
-        </h1>
-        <p class="food-description">
-          지금 막 출시한 새로운 신상품, 오후 3시면 벌써 품절되는 인기 상품 이랍니다.
-        </p>
-     <div class="main-top">
-        <div class="main-top-img">
-            <div class="main-top-img-background"></div> 
-            <img src="assets/img/Home/Trending Picks/Burger-img.png" 
-                      class="img-fluid img" id="food-img" alt="햄버거" />         
         </div>
-        <div class="container my-3">
-            <div class="row">
-                <div class="opt">
-                    칠리새우를 넣은 진짜 맛좋은 더블버거
+        <div role="main" class="ui-content list">
+            <form>
+                <input type="search" name="search" id="search" class="custom-input" placeholder="검색..." />
+            </form>
+
+            <h1 class="food-title text-center">
+                칠리새우를 넣은 진짜 맛좋은 더블버거
+            </h1>
+            <p class="food-description">
+                지금 막 출시한 새로운 신상품, 오후 3시면 벌써 품절되는 인기 상품 이랍니다.
+            </p>
+            <div class="main-top">
+                <div class="main-top-img">
+                    <div class="main-top-img-background"></div>
+                    <img src="assets/img/Home/Trending Picks/Burger-img.png" class="img-fluid img" id="food-img"
+                        alt="햄버거" />
                 </div>
-                <div class="opt-price">
-                    15,000원
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="opt">
+                            칠리새우를 넣은 진짜 맛좋은 더블버거
+                        </div>
+                        <div class="opt-price">
+                            15,000원
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
 
-        <div class="ul-topping">
+                <div class="ul-topping">
 
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top1.png');"
-                     data-optionprice="800"
-                     data-option="고기추가">
-                     <p>고기추가</p>
-                     <p>800원</p>
+                    <div class="ul-topping-box">
+                        <div class="topping" style="background-image:url('assets/img/Home/top1.png');"
+                            data-optionprice="800" data-option="고기추가">
+                            <p>고기추가</p>
+                            <p>800원</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top2.png');"
-                     data-optionprice="500"
-                     data-option="야채추가">
-                     <p>야채추가</p>
-                     <p>500원</p>
-                </div>
-            </div>
-
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top3.png');"
-                     data-optionprice="1500"
-                     data-option="치즈추가">
-                     <p>치즈추가</p>
-                     <p>1,500원</p>
-                </div>
-            </div>
-
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top4.png');"
-                     data-optionprice="500"
-                     data-option="딸기쨈추가">
-                     <p>딸기쨈추가</p>
-                     <p>500원</p>
-                </div>
-            </div>
-
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top5.png');"
-                     data-optionprice="1200"
-                     data-option="양상추추가">
-                     <p>양상추추가</p>
-                     <p>1,200원</p>
-                </div>
-            </div>
-
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top6.png');"
-                     data-optionprice="500"
-                     data-option="버섯추가">
-                     <p>버섯추가</p>
-                     <p>500원</p>
+                <div class="container my-4 ml-3">
+                    <div class="row mb-5">
+                        <div class="col-5 pt-3">수량선택 :</div>
+                        <div class="col-7">
+                            <div class="quantity-box d-flex">
+                                <span class="down"><i class="ri-arrow-down-s-line"></i></span>
+                                <input type="number" class="count-only" readonly value="1">
+                                <span class="up"><i class="ri-arrow-up-s-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-4">합계금액 : </div>
+                        <div class="col-8 text-right total">15,000원</div>
+                    </div>
+                    <input type="hidden" id="foodId" name="foodId">
+                    <input type="hidden" id="price" name="price" value="15000">
+                    <input type="hidden" id="option-price" value="15000">
+                    <input type="hidden" id="total-price" name="total-price" value="15000">
+                    <input type="hidden" id="option" />
                 </div>
             </div>
 
-            <div class="ul-topping-box">
-                <div class="topping"
-                     style="background-image:url('assets/img/Home/top7.png');"
-                     data-optionprice="900"
-                     data-option="토마토추가">
-                     <p>토마토추가</p>
-                     <p>900원</p>
-                </div>
-            </div>
-
-        </div>
-        <div class="container my-4 ml-3">
-            <div class="row mb-5">
-                <div class="col-5 pt-3">수량선택 :</div>
-                <div class="col-7">
-                    <div class="quantity-box d-flex">
-                        <span class="down"><i class="ri-arrow-down-s-line"></i></span>
-                        <input type="number" class="count-only" readonly value="1">
-                        <span class="up"><i class="ri-arrow-up-s-line"></i></span>
+            <div class="container my-5">
+                <div class="d-flex">
+                    <div class="col-4">
+                        <button type="button" class="btn btn-wish">
+                            <i class="ri-heart-fill"></i><br> wish
+                        </button>
+                    </div>
+                    <div class="col-4">
+                        <a href="#list-cart" class="btn btn-cart" data-rel="dialog" data-transition="slidedown">
+                            <i class="ri-shopping-cart-fill"></i><br> cart
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <button type="button" class="btn btn-order">
+                            <i class="ri-corner-down-left-fill"></i><br> order
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="row mb-5">
-                <div class="col-4">합계금액 : </div>
-                <div class="col-8 text-right total">15,000원</div>
-            </div>
-            <input type="hidden" id="foodId" name="foodId">
-            <input type="hidden" id="price" name="price" value="15000">
-            <input type="hidden" id="option-price" value="15000">
-            <input type="hidden" id="total-price" name="total-price" value="15000">        
-            <input type="hidden" id="option" />
-        </div> 
-     </div>  
 
-     <div class="container my-5">
-        <div class="d-flex">
-            <div class="col-4">
-                <a href="#" type="button" class="btn btn-wish">
-                    <i class="ri-heart-fill"></i><br> wish
-                </a>
-            </div>
-            <div class="col-4">
-                <a href="#list-cart" class="btn btn-cart"
-                data-rel="dialog" data-transition="slidedown">
-                    <i class="ri-shopping-cart-fill"></i><br> cart
-                </a>
-            </div>
-            <div class="col-4">
-                <a href="#" type="button" class="btn btn-order">
-                    <i class="ri-corner-down-left-fill"></i><br> order
-                </a>
-            </div>
-        </div>
-     </div>
-
-    </div> 
-    <!-- ui-content -->
-    <footer data-role="footer" data-position="fixed">
+        </div> <!-- ui-content -->
+        <footer data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
                     <li>
@@ -198,7 +130,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#"><i class="ri-heart-fill"></i><br>whish list</a>
+                        <a href="home.html" rel="external"><i class="ri-file-list-fill"></i><br>list</a>
                     </li>
                     <li>
                         <a href="#"><i class="ri-shopping-cart-fill"></i><br>cart</a>
@@ -206,11 +138,36 @@
                 </ul>
             </div>
         </footer>
-      </div><!-- page -->
+    </div><!-- page -->
 
-      <div data-role="page" id="list-cart" class="cart-upload-list">
-        장바구니
-        <ul></ul>
-      </div>
-    </body>
-    </html>
+    <!-- cart -->
+    <div data-role="page" id="list-cart" data-dom-cache="true">
+        <div data-role="header" data-theme="b">
+            <h1>Dialog</h1>
+        </div><!-- /header -->
+        <!-- cartItem(수량, 가격 포함해서) -->
+    </div>
+
+      <!-- wish-->
+    <div data-role="page" id="list-wish" data-dom-cache="true">
+        <div data-role="header" data-theme="a">
+            <h1>Wish List</h1>
+        </div>
+        <div class="ui-content" role="main">
+            <ul data-role="listview" data-inset="true" id="wishlist">
+                <li>
+                    <a href="#">
+                        <img src="assets/img/Home/Trending Picks/Burger-img.png" class="ui-li-thumb">
+                        <h2>햄버거 제목</h2>
+                        <p>햄버거 내용 <span>가격</span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- dialog-->
+
+
+</body>
+
+</html>

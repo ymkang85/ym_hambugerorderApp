@@ -1,22 +1,12 @@
-function myOption(){
-    let price = Number($("#price").val());  //최초 상품 가격
+function myoption(){
+
+    let price = parseInt($("#price").val());  //최초 상품 가격
     let totalprice = $("#price").val();  // 총 상품가격 변수 선언
+ 
+     console.log(totalprice);
+
     let option_arr = [];  //상품 옵션은 여러개 일수 있으므로 배열로 선언
         
-    $('.slider').not('.slick-initialized').slick({
-       autoplay: true,
-       autoplaySpeed: 3000,
-       dots:true,
-       arrows: false
-    });
-
-    $('.ul-topping').not('.slick-initialized').slick({
-       infinite: true,
-       slidesToShow: 3,
-       dots: false,
-       arrows: false
-    });
-
     $('.down').click(function(){  //수량 다운버튼
         let ct = $('.count-only').val();  //현재 수량을 가져옴
         if(ct > 1) {  //수량이 1보다 작을 경우 버튼 무시
@@ -39,28 +29,29 @@ function myOption(){
         $('.total').text(totalprice.toLocaleString() + "원");    
     });
 
-       $('.topping').click(function(){   
-    //    $(document).on("click","topping", function(){
+   // $('.topping').click(function(){   
+   $(document).on("click", ".topping", function(){ 
        const option = $(this).data("option");
-       let ct = Number($('.count-only').val());
-       let addprice = Number($(this).data("optionprice"));
+       let ct = parseInt($('.count-only').val());
+       let addprice = parseInt($(this).data("optionprice"));
        let addprice2 = addprice * ct;
-       price = Number($('#option-price').val());
+       price = parseInt($('#option-price').val());
 
        if($(this).hasClass('active')){
            $(this).removeClass('active');
-           totalprice = Number(totalprice) - addprice2;
+           totalprice = parseInt(totalprice) - addprice2;
            optionprice = price - addprice;
            option_arr.pop(option);
        }else{  
            $(this).addClass('active');
-           totalprice = Number(totalprice) + addprice2;
+           totalprice = parseInt(totalprice) + addprice2;
            optionprice = price + addprice;
            option_arr.push(option);
        }        
            $('#total-price').val(totalprice);
            $('#option-price').val(optionprice);
            $('.total').text(totalprice.toLocaleString() + "원");
-    });    
-  }
+    });
+    
+}
 
