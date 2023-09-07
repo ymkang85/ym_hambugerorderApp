@@ -52,6 +52,7 @@ function myoption(){
            $('#total-price').val(totalprice);
            $('#option-price').val(optionprice);
            $('.total').text(totalprice.toLocaleString() + "원");
+           console.log(option_arr);
     });
         
 }

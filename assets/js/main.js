@@ -37,7 +37,7 @@ $(document).on("pagecreate", function () {
                    <img src="${list.foodImg}">
                    <h2>${list.title}</h2>
                    <p>수량 : ${list.count}개<br>
-                   <p>사이드추가: ${option_arr} <br><span>총 ${list.totalprice}원</span></p>
+                   <p>사이드추가: ${option_arr} <br><span>총 ${list.totalprice}</span></p>
                 </a>
              </li>
           `;
@@ -154,7 +154,8 @@ $(document).on("pagecreate", function () {
          const price = $('.opt-price').text();
          const foodImg = $('#food-img').attr("src");
 
-         let totalprice = $("#total-price").val();
+         let totalprice = $('.total').text();
+         $('.total').text(totalprice.toLocaleString());
          let ct = $('.count-only').val();
 
          let dummy1 = {
