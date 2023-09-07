@@ -125,10 +125,12 @@ html body .ui-group-theme-a a:visited {
     text-shadow: none;
 }
 .ui-page-theme-a a,
-.ui-page-theme-a a.login-btn {
+.ui-page-theme-a a.login-btn,
+.ui-page-theme-a a.register-btn {
     color: #fff /*{a-link-color}*/;
     font-weight: 500;
 }
+
 
 /* ######################## REGISTER ######################### */
 /* .register-form label{
@@ -438,6 +440,19 @@ a.btn.btn-order{
     margin-right:15px;
  }
  #wishlist li:not(:last-child){
+     border-bottom:1px dashed #bebebe;
+ }
+
+ /* ############################ CART ########################################## */
+#cartlist .mycartList{
+    padding:1.2em;
+ }
+ #cartlist .mycartList a img{
+    max-height:50px;
+    float:left;
+    margin-right:15px;
+ }
+ #cartlist li:not(:last-child){
      border-bottom:1px dashed #bebebe;
  }
 

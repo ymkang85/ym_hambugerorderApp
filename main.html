@@ -95,7 +95,7 @@
                     <input type="hidden" id="price" name="price" value="15000">
                     <input type="hidden" id="option-price" value="15000">
                     <input type="hidden" id="total-price" name="total-price" value="15000">
-                    <input type="hidden" id="option" />
+                    <input type="hidden" id="option" value=""/>
                 </div>
             </div>
 
@@ -143,9 +143,19 @@
     <!-- cart -->
     <div data-role="page" id="list-cart" data-dom-cache="true">
         <div data-role="header" data-theme="b">
-            <h1>Dialog</h1>
-        </div><!-- /header -->
-        <!-- cartItem(수량, 가격 포함해서) -->
+            <h1>Cart List</h1>
+        </div>
+        <div class="ui-content" role="main">
+            <ul data-role="listview" data-inset="true" id="cartlist">
+                <li>
+                    <a href="#">
+                        <img src="assets/img/Home/Trending Picks/Burger-img.png" class="ui-li-thumb">
+                        <h2>햄버거 제목</h2>
+                        <p>햄버거 수량, 패티 종류 <br><span class="cart-total">총가격</span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
       <!-- wish-->

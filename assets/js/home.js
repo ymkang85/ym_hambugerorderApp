@@ -2,7 +2,7 @@ $(document).on("pagecreate", function(){
     //$.get(url, function(){ ... })
    // const search = $("#search").val();
     const isAuthorized = localStorage.getItem("isAuthorized");
-    console.log(isAuthorized);
+    //console.log(isAuthorized);
     if(isAuthorized != 'authorized'){
         alert("회원전용 페이지입니다. 로그인 해 주세요.");
         window.location.href="login.html";
@@ -29,7 +29,7 @@ $(document).on("pagecreate", function(){
                     break;
                 }
             }
-             console.log(foodStar);
+            // console.log(foodStar);
               $(".list").append(`<a href="main.html?foodId=${list.foodId}" data-ajax="false" class="row food-card">
               <div class="col-4 my-auto">
                  <img src="${list.foodImg}" 

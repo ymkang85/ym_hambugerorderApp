@@ -1,9 +1,8 @@
 function myoption(){
 
     let price = parseInt($("#price").val());  //최초 상품 가격
-    let totalprice = $("#price").val();  // 총 상품가격 변수 선언
+    let totalprice = $("#total-price").val();  // 총 상품가격 변수 선언
  
-     console.log(totalprice);
 
     let option_arr = [];  //상품 옵션은 여러개 일수 있으므로 배열로 선언
         
@@ -13,7 +12,7 @@ function myoption(){
            ct--; //현재 수량에서 1을 뺌
            $('.count-only').val(ct);  //1을 뺀수를 저장
            let optionprice = $('#option-price').val(); //옵션이 포함된 가격을 가져옴
-           totalprice = optionprice * ct;  //가격에 수량을 더함 
+           totalprice = optionprice * ct;  //가격에 수량을 곱함 
            $('#total-price').val(totalprice); 
            $('.total').text(totalprice.toLocaleString() + "원");   
         }
@@ -42,16 +41,18 @@ function myoption(){
            totalprice = parseInt(totalprice) - addprice2;
            optionprice = price - addprice;
            option_arr.pop(option);
+           localStorage.removeItem(option_arr);
        }else{  
            $(this).addClass('active');
            totalprice = parseInt(totalprice) + addprice2;
            optionprice = price + addprice;
            option_arr.push(option);
+           localStorage.setItem("option_arr", JSON.stringify(option_arr));
        }        
            $('#total-price').val(totalprice);
            $('#option-price').val(optionprice);
            $('.total').text(totalprice.toLocaleString() + "원");
     });
-    
+        
 }
 
