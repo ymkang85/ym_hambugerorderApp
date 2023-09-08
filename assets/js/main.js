@@ -188,10 +188,10 @@ function distorySlick() {
 function storageClear() {
 
    localStorage.clear();
-   //    const myStorage = ["wishItems", "userid", "cartItems", "members", "userpass", "isAuthorized"];
-   //    for(let i = 0; i < myStorage.length; i++) {
-   //        localStorage.removeItem(myStorage[i]);
-   //    }
+      const myStorage = ["wishItems", "userid", "cartItems", "members", "userpass", "isAuthorized"];
+      for(let i = 0; i < myStorage.length; i++) {
+          localStorage.removeItem(myStorage[i]);
+      }
    window.location.href = "index.html";
 
 }
